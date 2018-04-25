@@ -1,0 +1,18 @@
+ guideComment: Hello there, it will be helpful if you choose one of following categories.
+ errorComment: There is no such a category :worried:, please use a following category.
+ categories:
+  - keyword: ui
+    label:
+      name: 'UI :desktop_computer:' 
+      color: 000007
+      description: UI related
+  - keyword: backend
+    label:
+      name: 'Backend :wrench:'
+      color: 005500
+      description: Backend related
+  - keyword: security
+    label:
+      name: 'Security :lock_with_ink_pen:'
+      color: 000075
+      description: Security related
