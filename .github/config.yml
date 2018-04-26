@@ -1,18 +1,68 @@
- guideComment: Hello there, it will be helpful if you choose one of following categories.
- errorComment: There is no such a category :worried:, please use a following category.
- categories:
-  - keyword: ui
-    label:
-      name: 'UI :desktop_computer:' 
-      color: 000007
-      description: UI related
-  - keyword: backend
-    label:
-      name: 'Backend :wrench:'
-      color: 005500
-      description: Backend related
-  - keyword: security
-    label:
-      name: 'Security :lock_with_ink_pen:'
-      color: 000075
-      description: Security related
+#Response time configuration
+response:
+  #Is available for pull requests
+  pull_requests: true
+
+  #Is available for issues
+  issues: true
+
+  #Calculation based on pull_requests / issues or both
+  calculation_based: both
+
+  #Response message
+  reponse_message:
+    soon_reponse: "Thank you for openning an issue. We appreciate your contribution towards the project, someone will get back to you soon. :hourglass:"
+    time_response: "Thank you for openning an issue. We appreciate your contribution towards the project, based on the past issues someone will get back to you within"
+
+  #Buffer time - 1 hr / 1 day
+  buffer_time: 1 day
+
+  #Limit for the calculation sample
+  activities_count: 20
+  
+#Response time reminder configuration
+reminder:
+  #Is reminder function switched on 
+  available: true
+
+  label:
+    #Waiting for reponse label
+    waiting:
+      name: waiting for response
+      color: aaaaaa
+    #Remaining time label
+    #format: time_out label name + remmaining time + :hourglass_flowing_sand:
+    time_out:
+      name: response time out
+      color: bbbbbb
+
+#Categorizing configuration
+categorizer:
+  #Is categorizing function switched on
+  available: true
+  
+  guideComment: Hello there, it will be helpful if you choose one of following categories.
+  errorComment: There is no such a category :worried:, please use a following category.
+ 
+  #Categories configuration
+      #Category keyword - Mandotory
+      #Category label details
+        #Category name
+        #Catgory description
+        #Label color
+  categories:
+    - keyword: ui
+      label:
+        name: 'UI :desktop_computer:' 
+        color: 000007
+        description: UI related
+    - keyword: backend
+      label:
+        name: 'Backend :wrench:'
+        color: 005500
+        description: Backend related
+    - keyword: security
+      label:
+        name: 'Security :lock_with_ink_pen:'
+        color: 000075
+        description: Security related
